@@ -27,4 +27,10 @@ class ApiUrls {
   static const String categoryCreateEndPoint = "$categoryEndPoint/create";
   static const String categoryDeleteEndPoint = categoryEndPoint;
   static const String categoryUpdateEndPoint = categoryEndPoint;
+
+  static const String subCategoryEndPoint = "$categoryEndPoint/sub/category";
+
+  static const String subCategoryCreateEndPoint = "$subCategoryEndPoint/create";
+  static const String subCategoryDeleteEndPoint = subCategoryEndPoint + "/";
+  static const String subCategoryUpdateEndPoint = subCategoryEndPoint + "/";
 }

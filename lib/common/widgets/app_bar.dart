@@ -1,6 +1,5 @@
 import 'package:anakallumkal_app/common/theme/theme_bloc.dart';
 import 'package:anakallumkal_app/utils/app_colors.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -112,37 +111,37 @@ class CustomAppBar extends StatelessWidget {
                     },
                   ),
                   const SizedBox(width: 16),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: CachedNetworkImageProvider(
-                            "https://www.w3schools.com/howto/img_avatar.png"),
-                      ),
-                    ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Aravind",
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleMedium!
-                            .copyWith(height: 0),
-                      ),
-                      const Text(
-                        "Cashier",
-                        style: TextStyle(
-                          fontSize: 12,
-                          height: 0,
-                          color: Colors.blueGrey,
-                        ),
-                      )
-                    ],
-                  )
+                  // Container(
+                  //   height: 50,
+                  //   width: 50,
+                  //   decoration: const BoxDecoration(
+                  //     shape: BoxShape.circle,
+                  //     image: DecorationImage(
+                  //       image: CachedNetworkImageProvider(
+                  //           "https://www.w3schools.com/howto/img_avatar.png"),
+                  //     ),
+                  //   ),
+                  // ),
+                  // Column(
+                  //   crossAxisAlignment: CrossAxisAlignment.start,
+                  //   children: [
+                  //     Text(
+                  //       "Aravind",
+                  //       style: Theme.of(context)
+                  //           .textTheme
+                  //           .titleMedium!
+                  //           .copyWith(height: 0),
+                  //     ),
+                  //     const Text(
+                  //       "Cashier",
+                  //       style: TextStyle(
+                  //         fontSize: 12,
+                  //         height: 0,
+                  //         color: Colors.blueGrey,
+                  //       ),
+                  //     )
+                  //   ],
+                  // )
                 ],
               )
           ],

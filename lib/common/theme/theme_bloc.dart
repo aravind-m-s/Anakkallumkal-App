@@ -10,7 +10,7 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
       (event, emit) => emit(SwitchThemeState(isDarkMode: event.isDarkMode)),
     );
     on<GetThemeEvent>(
-      (event, emit) => emit(const SwitchThemeState(isDarkMode: true)),
+      (event, emit) => emit(const SwitchThemeState(isDarkMode: false)),
     );
   }
 }

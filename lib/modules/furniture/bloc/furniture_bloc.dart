@@ -88,9 +88,7 @@ class FurnitureBloc extends Bloc<FurnitureEvent, FurnitureState> {
           ),
         );
       }
-    } catch (e, s) {
-      print(e);
-      print(s);
+    } catch (e) {
       emit(const GetAllBrandsErrorState(message: "Internal Error Occured"));
     }
     isBrandLoading = false;
@@ -220,9 +218,7 @@ class FurnitureBloc extends Bloc<FurnitureEvent, FurnitureState> {
         emit(CreateFurnitureErrorState(
             message: jsonDecode(response.body)['message'] ?? ""));
       }
-    } catch (e, s) {
-      print(e);
-      print(s);
+    } catch (e) {
       emit(const CreateFurnitureErrorState(message: "Internal Error Occured"));
     }
   }

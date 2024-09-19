@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:anakallumkal_app/api/api_urls.dart';
 import 'package:anakallumkal_app/modules/furniture/bloc/furniture_bloc.dart';
@@ -57,68 +56,68 @@ class _FurnituresState extends State<Furnitures> {
                   ),
                 Row(
                   children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width <= 600
-                          ? MediaQuery.of(context).size.width - 150
-                          : MediaQuery.of(context).size.width > 670
-                              ? 250
-                              : 200,
-                      height: 40,
-                      child: TextField(
-                        onChanged: (value) {
-                          debouncer.run(
-                            () {
-                              context
-                                  .read<FurnitureBloc>()
-                                  .brandFurnitures
-                                  .remove(context
-                                      .read<FurnitureBloc>()
-                                      .currentBrand
-                                      .id);
-                              context.read<FurnitureBloc>().add(
-                                    GetAllFurnituresEvent(
-                                      brand: context
-                                          .read<FurnitureBloc>()
-                                          .currentBrand,
-                                      query: value.toLowerCase().trim(),
-                                    ),
-                                  );
-                            },
-                          );
-                        },
-                        decoration: InputDecoration(
-                          prefixIcon: Transform.scale(
-                            scale: 0.5,
-                            child:
-                                SvgPicture.asset("assets/svgs/search_icon.svg"),
-                          ),
-                          hintText: "Search Furnitures",
+                    // SizedBox(
+                    //   width: MediaQuery.of(context).size.width <= 600
+                    //       ? MediaQuery.of(context).size.width - 150
+                    //       : MediaQuery.of(context).size.width > 670
+                    //           ? 250
+                    //           : 200,
+                    //   height: 40,
+                    //   child: TextField(
+                    //     onChanged: (value) {
+                    //       debouncer.run(
+                    //         () {
+                    //           context
+                    //               .read<FurnitureBloc>()
+                    //               .brandFurnitures
+                    //               .remove(context
+                    //                   .read<FurnitureBloc>()
+                    //                   .currentBrand
+                    //                   .id);
+                    //           context.read<FurnitureBloc>().add(
+                    //                 GetAllFurnituresEvent(
+                    //                   brand: context
+                    //                       .read<FurnitureBloc>()
+                    //                       .currentBrand,
+                    //                   query: value.toLowerCase().trim(),
+                    //                 ),
+                    //               );
+                    //         },
+                    //       );
+                    //     },
+                    //     decoration: InputDecoration(
+                    //       prefixIcon: Transform.scale(
+                    //         scale: 0.5,
+                    //         child:
+                    //             SvgPicture.asset("assets/svgs/search_icon.svg"),
+                    //       ),
+                    //       hintText: "Search Furnitures",
 
-                          // ignore: prefer_const_constructors
-                          hintStyle: TextStyle(
-                              fontSize: 14, color: Colors.grey.shade400),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide(
-                                color: Theme.of(context).dividerColor),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide(
-                              color: AppColors.primaryColor,
-                            ),
-                          ),
-                          focusColor: AppColors.primaryColor,
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide(
-                              color: AppColors.primaryColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 24),
+                    //       // ignore: prefer_const_constructors
+                    //       hintStyle: TextStyle(
+                    //           fontSize: 14, color: Colors.grey.shade400),
+                    //       enabledBorder: OutlineInputBorder(
+                    //         borderRadius: BorderRadius.circular(8),
+                    //         borderSide: BorderSide(
+                    //             color: Theme.of(context).dividerColor),
+                    //       ),
+                    //       border: OutlineInputBorder(
+                    //         borderRadius: BorderRadius.circular(8),
+                    //         borderSide: BorderSide(
+                    //           color: AppColors.primaryColor,
+                    //         ),
+                    //       ),
+                    //       focusColor: AppColors.primaryColor,
+                    //       focusedBorder: OutlineInputBorder(
+                    //         borderRadius: BorderRadius.circular(8),
+                    //         borderSide: BorderSide(
+                    //           color: AppColors.primaryColor,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
+                    // const SizedBox(width: 24),
                     GestureDetector(
                       onTap: () {
                         context.read<FurnitureBloc>().add(
@@ -247,38 +246,38 @@ class _FurnituresState extends State<Furnitures> {
                                   ],
                                 ),
                               ),
-                              Container(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Theme.of(context).dividerColor,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Row(
-                                  children: [
-                                    Transform.rotate(
-                                      angle: 90 * pi / 180,
-                                      child: SvgPicture.asset(
-                                        "assets/svgs/filter_icon.svg",
-                                        colorFilter: ColorFilter.mode(
-                                          Theme.of(context).iconTheme.color!,
-                                          BlendMode.srcIn,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(width: 4),
-                                    Text(
-                                      "Filter",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall,
-                                    ),
-                                    const SizedBox(width: 8),
-                                  ],
-                                ),
-                              ),
+                              // Container(
+                              //   padding:
+                              //       const EdgeInsets.symmetric(horizontal: 16),
+                              //   decoration: BoxDecoration(
+                              //     border: Border.all(
+                              //       color: Theme.of(context).dividerColor,
+                              //     ),
+                              //     borderRadius: BorderRadius.circular(8),
+                              //   ),
+                              //   child: Row(
+                              //     children: [
+                              //       Transform.rotate(
+                              //         angle: 90 * pi / 180,
+                              //         child: SvgPicture.asset(
+                              //           "assets/svgs/filter_icon.svg",
+                              //           colorFilter: ColorFilter.mode(
+                              //             Theme.of(context).iconTheme.color!,
+                              //             BlendMode.srcIn,
+                              //           ),
+                              //         ),
+                              //       ),
+                              //       const SizedBox(width: 4),
+                              //       Text(
+                              //         "Filter",
+                              //         style: Theme.of(context)
+                              //             .textTheme
+                              //             .titleSmall,
+                              //       ),
+                              //       const SizedBox(width: 8),
+                              //     ],
+                              //   ),
+                              // ),
                             ],
                           ),
                           const SizedBox(height: 16),

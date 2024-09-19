@@ -1,12 +1,10 @@
 import 'package:anakallumkal_app/common/functions/get_theme_data.dart';
 import 'package:anakallumkal_app/common/theme/theme_bloc.dart';
+import 'package:anakallumkal_app/modules/category/view/category_screen.dart';
 import 'package:anakallumkal_app/modules/furniture/view/furniture_screen.dart';
-import 'package:anakallumkal_app/utils/app_colors.dart';
 import 'package:anakallumkal_app/utils/observer.dart';
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:toastification/toastification.dart';
 
 void main() {

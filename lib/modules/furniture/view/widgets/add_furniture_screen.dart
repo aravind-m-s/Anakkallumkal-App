@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:anakallumkal_app/api/api_urls.dart';
 import 'package:anakallumkal_app/modules/furniture/bloc/furniture_bloc.dart';
-import 'package:anakallumkal_app/modules/furniture/model/category_model.dart';
 import 'package:anakallumkal_app/modules/furniture/model/furniture_model.dart';
 import 'package:anakallumkal_app/utils/app_colors.dart';
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
